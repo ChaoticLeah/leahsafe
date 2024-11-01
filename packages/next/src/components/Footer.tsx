@@ -23,12 +23,12 @@ export const SiteFooter = async ({ className = '' }: { readonly className?: stri
 					<p className="text-center text-sm leading-loose md:text-left">
 						Built by{' '}
 						<a
-							href="https://kana.dev"
+							href="https://leahdevs.xyz"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="font-medium underline underline-offset-4"
 						>
-							Pitu
+							Leah
 						</a>
 						. The source code is available on{' '}
 						<a

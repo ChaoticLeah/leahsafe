@@ -1,12 +1,15 @@
 import { Navigation } from '@/components/Navigation';
 import { NavigationUser } from '@/components/NavigationUser';
-import { DiscordLogo } from '@/components/svg/DiscordLogo';
+// import { DiscordLogo } from '@/components/svg/DiscordLogo';
 import { GitHubLogo } from '@/components/svg/GitHubLogo';
-import { PatreonLogo } from '@/components/svg/PatreonLogo';
+// import { PatreonLogo } from '@/components/svg/PatreonLogo';
+import { MisskeyLogo } from '@/components/svg/MisskeyLogo';
 import { UploadProgress } from '@/components/UploadProgress';
 import { buttonVariants } from '@/styles/button';
 import { ChibisafeLogo } from './svg/ChibisafeLogo';
 import request from '@/lib/request';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 export const Header = async () => {
 	const { data } = await request.get({
@@ -24,19 +27,7 @@ export const Header = async () => {
 				<Navigation logo={<ChibisafeLogo className="w-6 h-6" />} serviceName={data?.serviceName} />
 				<UploadProgress />
 				<nav className="flex items-center gap-1">
-					<a href="https://discord.gg/5g6vgwn" target="_blank" rel="noopener noreferrer">
-						<div
-							className={buttonVariants({
-								size: 'icon',
-								variant: 'ghost'
-							})}
-						>
-							<DiscordLogo className="h-6 w-6" />
-							<span className="sr-only">Discord</span>
-						</div>
-					</a>
-
-					<a href="https://github.com/chibisafe/chibisafe" target="_blank" rel="noopener noreferrer">
+					<a href="https://github.com/ChaoticLeah/leahsafe" target="_blank" rel="noopener noreferrer">
 						<div
 							className={buttonVariants({
 								size: 'icon',
@@ -48,17 +39,29 @@ export const Header = async () => {
 						</div>
 					</a>
 
-					<a href="https://patreon.com/pitu" target="_blank" rel="noopener noreferrer">
+					<a href="http://fedi.leahdevs.xyz/" target="_blank" rel="noopener noreferrer">
 						<div
 							className={buttonVariants({
 								size: 'icon',
 								variant: 'ghost'
 							})}
 						>
-							<PatreonLogo className="h-6 w-6" />
-							<span className="sr-only">Patreon</span>
+							<MisskeyLogo className="h-6 w-6" />
+							<span className="sr-only">GitHub</span>
 						</div>
 					</a>
+
+					{/* <div className="hidden md:inline-flex ml-4">
+						<Link
+							href="/login"
+							className={cn(
+								buttonVariants({ variant: 'secondary', size: 'sm' }),
+								'px-4 items-center text-lg font-medium sm:text-sm'
+							)}
+						>
+							Info
+						</Link>
+					</div> */}
 					<div className="hidden md:inline-flex ml-4">
 						<NavigationUser />
 					</div>

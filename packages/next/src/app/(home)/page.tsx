@@ -1,5 +1,9 @@
 import { UploadTriggerHomepage } from '@/components/UploadTriggerHomepage';
 import { ChibisafeLogo } from '@/components/svg/ChibisafeLogo';
+import { DiscordLogo } from '@/components/svg/DiscordLogo';
+import { GitHubLogo } from '@/components/svg/GitHubLogo';
+import { MisskeyLogo } from '@/components/svg/MisskeyLogo';
+import { PatreonLogo } from '@/components/svg/PatreonLogo';
 import request from '@/lib/request';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/styles/button';
@@ -104,8 +108,6 @@ export default async function Home() {
 									) : null}
 									GitHub
 								</a>
-								{/*
-								{settings.contactEmail} */}
 								<a
 									href={'mailto:' + settings.contactEmail}
 									target="_blank"
@@ -257,6 +259,69 @@ export default async function Home() {
 						</a>
 						.
 					</p>
+
+					<div>
+						<h6 className="text-muted-foreground">Support leahsafe</h6>
+						<a href="https://github.com/ChaoticLeah/leahsafe" target="_blank" rel="noopener noreferrer">
+							<div
+								className={buttonVariants({
+									size: 'icon',
+									variant: 'ghost'
+								})}
+							>
+								<GitHubLogo className="h-6 w-6" />
+								<span className="sr-only">GitHub</span>
+							</div>
+						</a>
+						<a href="http://fedi.leahdevs.xyz/" target="_blank" rel="noopener noreferrer">
+							<div
+								className={buttonVariants({
+									size: 'icon',
+									variant: 'ghost'
+								})}
+							>
+								<MisskeyLogo className="h-6 w-6" />
+								<span className="sr-only">GitHub</span>
+							</div>
+						</a>
+					</div>
+
+					<div>
+						<h6 className="text-muted-foreground">Support chibisafe</h6>
+						<a href="https://github.com/chibisafe/chibisafe" target="_blank" rel="noopener noreferrer">
+							<div
+								className={buttonVariants({
+									size: 'icon',
+									variant: 'ghost'
+								})}
+							>
+								<GitHubLogo className="h-6 w-6" />
+								<span className="sr-only">GitHub</span>
+							</div>
+						</a>
+						<a href="https://patreon.com/pitu" target="_blank" rel="noopener noreferrer">
+							<div
+								className={buttonVariants({
+									size: 'icon',
+									variant: 'ghost'
+								})}
+							>
+								<PatreonLogo className="h-6 w-6" />
+								<span className="sr-only">Patreon</span>
+							</div>
+						</a>
+						<a href="https://discord.gg/5g6vgwn" target="_blank" rel="noopener noreferrer">
+							<div
+								className={buttonVariants({
+									size: 'icon',
+									variant: 'ghost'
+								})}
+							>
+								<DiscordLogo className="h-6 w-6" />
+								<span className="sr-only">Discord</span>
+							</div>
+						</a>
+					</div>
 				</div>
 			</section>
 		</div>
