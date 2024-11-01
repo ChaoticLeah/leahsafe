@@ -11,6 +11,7 @@ export const schema = {
 		200: z.object({
 			serviceName: z.string().describe('The name of the service.'),
 			metaDescription: z.string().optional().describe('The description of the service.'),
+			contactEmail: z.string().describe('The contact email of the service.'),
 			metaKeywords: z.array(z.string().optional().describe('The keywords of the service.')),
 			metaTwitterHandle: z.string().optional().describe('The Twitter handle of the service.'),
 			metaDomain: z.string().optional().describe('The domain of the service.'),
@@ -50,6 +51,7 @@ export const run = (_: RequestWithUser, res: FastifyReply) => {
 	return res.send({
 		serviceName: SETTINGS.serviceName,
 		metaDescription: SETTINGS.metaDescription,
+		contactEmail: SETTINGS.contactEmail,
 		metaKeywords: SETTINGS.metaKeywords ? SETTINGS.metaKeywords.split(', ') : [],
 		metaTwitterHandle: SETTINGS.metaTwitterHandle,
 		metaDomain: SETTINGS.metaDomain,

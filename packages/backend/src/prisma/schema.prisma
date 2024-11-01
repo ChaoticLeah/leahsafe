@@ -142,6 +142,7 @@ model settings {
 	backgroundImageURL String
 	logoURL String
 	metaDescription String
+	contactEmail String @default("")
 	metaKeywords String
 	metaTwitterHandle String
 	metaDomain String @default("")

@@ -105,6 +105,7 @@ export interface Settings {
 	backgroundImageURL: string;
 	blockedExtensions: string[];
 	chunkSize: number;
+	contactEmail: string;
 	logoURL: string;
 	maxSize: number;
 	metaDescription: string;

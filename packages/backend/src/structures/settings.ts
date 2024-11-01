@@ -44,6 +44,7 @@ export const loadSettings = async (force = false) => {
 		SETTINGS.secret = settingsTable.secret;
 		SETTINGS.chunkSize = Number(settingsTable.chunkSize);
 		SETTINGS.chunkedUploadsTimeout = settingsTable.chunkedUploadsTimeout;
+		SETTINGS.contactEmail = settingsTable.contactEmail;
 		SETTINGS.maxSize = Number(settingsTable.maxSize);
 		SETTINGS.generateZips = settingsTable.generateZips;
 		SETTINGS.generateOriginalFileNameWithIdentifier = settingsTable.generateOriginalFileNameWithIdentifier;
@@ -90,6 +91,7 @@ export const loadSettings = async (force = false) => {
 		serveUploadsFrom: '',
 		chunkSize: 9 * 9e6, // 90 MB
 		chunkedUploadsTimeout: 30 * 60 * 1000, // 30 minutes
+		contactEmail: '',
 		maxSize: 1 * 1e9, // 1 GB
 		generateZips: true,
 		generateOriginalFileNameWithIdentifier: false,
@@ -204,6 +206,13 @@ const SETTINGS_META = {
 		description: 'The timeout in milliseconds for chunked uploads.',
 		name: 'Chunked Uploads Timeout',
 		category: 'uploads'
+	},
+	contactEmail: {
+		type: 'string',
+		description: 'The contact email for the instance.',
+		name: 'Contact Email',
+		example: 'leah@example.com',
+		category: 'customization'
 	},
 	maxSize: {
 		type: 'number',

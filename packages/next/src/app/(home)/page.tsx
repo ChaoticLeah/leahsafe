@@ -10,7 +10,7 @@ export default async function Home() {
 	let stars = null;
 
 	try {
-		const response = await fetch('https://api.github.com/repos/chibisafe/chibisafe', {
+		const response = await fetch('https://api.github.com/repos/ChaoticLeah/leahsafe', {
 			headers: {
 				Accept: 'application/vnd.github+json'
 			},
@@ -44,7 +44,7 @@ export default async function Home() {
 		return (
 			<section className="py-2 sm:py-4">
 				<div className="container flex min-h-[calc(100vh-15rem)] max-w-[64rem] flex-col text-center place-items-center place-content-evenly gap-4">
-					<ChibisafeLogo className="mx-auto mb-4 sm:h-64 sm:w-64 w-32 h-32" />
+					<ChibisafeLogo className="mx-auto mb-4 sm:h-64 sm:w-64 w-32 h-32 rounded-xl" />
 					<h1 className="font-heading text-2xl sm:text-5xl">Welcome to chibisafe</h1>
 					<p className="max-w-[42rem] text-muted-foreground">
 						Couldn't establish a connection to the server. Please try again later.
@@ -58,10 +58,13 @@ export default async function Home() {
 		return (
 			<section className="py-2 sm:py-4">
 				<div className="container flex min-h-[calc(100vh-16rem)] max-w-[64rem] flex-col text-center place-items-center place-content-evenly gap-4">
-					<ChibisafeLogo className="mx-auto mb-4 sm:h-64 sm:w-64 w-32 h-32" />
+					<ChibisafeLogo className="mx-auto mb-4 sm:h-64 sm:w-64 w-32 h-32 rounded-xl" />
 					<h1 className="font-heading text-2xl sm:text-5xl">
 						Welcome to {settings.serviceName ?? 'chibisafe'}
 					</h1>
+					<div className="subtitle mt-8 lg:mt-16 italic leading-tight text-lg">
+						Pretty and performant vault to save all your files.
+					</div>
 					<UploadTriggerHomepage settings={settings} />
 				</div>
 			</section>
@@ -75,23 +78,20 @@ export default async function Home() {
 					<div className="flex flex-col-reverse lg:flex-row justify-between gap-8 lg:gap-0">
 						<div className="flex flex-col gap-6 items-center lg:items-start">
 							<h1 className="font-heading text-2xl sm:text-5xl text-center lg:text-left">
+								Welcome to
 								<span className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-blue-500 to-sky-500">
-									chibisafe{' '}
+									{' ' + (settings.serviceName ?? 'chibisafe')}
 								</span>
-								is a beautiful <br />
-								and performant vault to <br />
-								save all your files in the cloud. <br />
 							</h1>
-							<p className="max-w-full w-full text-muted-foreground text-lg lg:text-xl font-normal text-center lg:text-left">
-								A modern and self-hosted take on file uploading services that can handle anything you
-								throw at it thanks to it's robust and fast API, chunked uploads support and more.
+							<p className="max-w-full w-full text-muted-foreground text-lg lg:text-xl font-normal text-center lg:text-left  sm:h-28 sm:min-h-28">
+								{settings.metaDescription}
 							</p>
 							<div className="hidden md:flex flex-col md:flex-row gap-4">
 								<Link href="/login" className={cn(buttonVariants({ size: 'lg' }))}>
 									Get Started
 								</Link>
 								<a
-									href="https://github.com/chibisafe/chibisafe"
+									href="https://github.com/ChaoticLeah/leahsafe"
 									target="_blank"
 									rel="noopener noreferrer"
 									className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
@@ -104,10 +104,20 @@ export default async function Home() {
 									) : null}
 									GitHub
 								</a>
+								{/*
+								{settings.contactEmail} */}
+								<a
+									href={'mailto:' + settings.contactEmail}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
+								>
+									Contact
+								</a>
 							</div>
 						</div>
 
-						<ChibisafeLogo className="mx-auto sm:h-64 sm:min-h-64 sm:w-64 sm:min-w-64 w-32 min-w-32 h-32 min-h-32" />
+						<ChibisafeLogo className="mx-auto sm:h-64 sm:min-h-64 sm:w-64 sm:min-w-64 w-32 min-w-32 h-32 min-h-32 rounded-xl" />
 					</div>
 
 					<div className="flex flex-col gap-12 place-content-center place-items-center w-full">
@@ -117,7 +127,7 @@ export default async function Home() {
 								Get Started
 							</Link>
 							<a
-								href="https://github.com/chibisafe/chibisafe"
+								href="https://github.com/ChaoticLeah/leahsafe"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
@@ -138,7 +148,7 @@ export default async function Home() {
 				<div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
 					<h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Features</h2>
 					<p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-						chibisafe is easily customizable and deploying your own instance is a breeze.
+						leahsafe is easily customizable and deploying your own instance is a breeze.
 					</p>
 				</div>
 				<div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
@@ -218,7 +228,7 @@ export default async function Home() {
 				</div>
 				<div className="mx-auto text-center md:max-w-[58rem]">
 					<p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-						chibisafe is also built to be extensible and customizable; with a powerful API, a beautiful
+						leahsafe is also built to be extensible and customizable; with a powerful API, a beautiful
 						dashboard and a powerful search engine, you have all the tools needed to manage your files.
 					</p>
 				</div>
@@ -227,9 +237,18 @@ export default async function Home() {
 				<div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-8 text-center">
 					<h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">Proudly Open Source</h2>
 					<p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-						chibisafe is open source and powered by open source software. <br /> The code is available on{' '}
+						leahsafe is open source. <br /> It is a fork of{' '}
 						<a
 							href="https://github.com/chibisafe/chibisafe"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline underline-offset-4"
+						>
+							chibisafe
+						</a>
+						. The code is available on{' '}
+						<a
+							href="https://github.com/ChaoticLeah/leahsafe"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="underline underline-offset-4"

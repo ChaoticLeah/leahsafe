@@ -117,6 +117,7 @@ export interface Settings {
 	blockedExtensions: string[];
 	chunkSize: number;
 	chunkedUploadsTimeout: number;
+	contactEmail: string;
 	disableStatisticsCron: boolean;
 	disableUpdateCheck: boolean;
 	enableMixedCaseFilenames: boolean;

@@ -27,6 +27,7 @@ const formSchema = z.object({
 	metaTwitterHandle: z.string().optional(),
 	metaDomain: z.string().optional(),
 	useMinimalHomepage: z.boolean().optional(),
+	contactEmail: z.string().optional(),
 	// Service
 	serveUploadsFrom: z.string().refine(
 		value => {
