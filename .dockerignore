@@ -26,4 +26,5 @@
 **/docker-compose.example.yml
 **/docker-compose.yml
 **/packages/frontend
+readme-files/**
 *.bat
