@@ -10,10 +10,11 @@
 ## What is Leahsafe?
 Leahsafe is a fork of [Chibisafe](https://github.com/chibisafe/chibisafe) adding a few new features and changing some styling 💖
 
+This is more of a personal fork but can be used by others. It may not always be up to date.
 
 ### Features of this fork
 - ✨ Slightly more sleek home page
-- ✉️ Added an email contact page
+- ✉️ Added configurable email contact button
 
 
 ## Installing and running leahsafe
