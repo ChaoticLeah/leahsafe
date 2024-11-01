@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   chibisafe:
-    image: chibisafe/chibisafe:dev
+    image: chaoticleah/leahsafe:dev
     environment:
       - BASE_API_URL=http://chibisafe_server:8000
     expose:
@@ -10,7 +10,7 @@ services:
     restart: unless-stopped
 
   chibisafe_server:
-    image: chibisafe/chibisafe-server:dev
+    image: chaoticleah/leahsafe-servee:dev
     environment:
       - ADMIN_PASSWORD=admin
     volumes:
