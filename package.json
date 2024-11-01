@@ -1,7 +1,7 @@
 {
-	"name": "chibisafe",
+	"name": "leahsafe",
 	"version": "6.4.2",
-	"description": "Blazing fast file uploader and bunker written in node! 🚀",
+	"description": "A small fork of chibisafe",
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",
@@ -20,9 +20,9 @@
 		"update": "yarn upgrade-interactive"
 	},
 	"author": {
-		"name": "Pitu",
-		"email": "heyitspitu@gmail.com",
-		"url": "https://github.com/Pitu"
+		"name": "Leah",
+		"email": "leah@leahdevs.xyz",
+		"url": "https://github.com/ChaoticLeah"
 	},
 	"license": "MIT",
 	"engines": {

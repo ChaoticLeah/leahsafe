@@ -7380,17 +7380,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chibisafe@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "chibisafe@workspace:."
-  dependencies:
-    husky: "npm:^9.0.11"
-    is-ci: "npm:^3.0.1"
-    turbo: "npm:1.10.13"
-    typescript: "npm:^5.4.4"
-  languageName: unknown
-  linkType: soft
-
 "chokidar@npm:^3.5.2, chokidar@npm:^3.5.3, chokidar@npm:^3.6.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
@@ -10912,6 +10901,17 @@ __metadata:
   checksum: 10c0/9ab911213c4bd8bd583c850201c17794e52cb0660d1ab6e32558aadc8324abebf6844e46f92b80a5d600d0fbba7eface2c207bfaf270a1c7fd539e4c3a880bff
   languageName: node
   linkType: hard
+
+"leahsafe@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "leahsafe@workspace:."
+  dependencies:
+    husky: "npm:^9.0.11"
+    is-ci: "npm:^3.0.1"
+    turbo: "npm:1.10.13"
+    typescript: "npm:^5.4.4"
+  languageName: unknown
+  linkType: soft
 
 "legacy-swc-helpers@npm:@swc/helpers@=0.4.14":
   version: 0.4.14
